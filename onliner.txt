@@ -1,0 +1,1 @@
+git clone https://github.com/heigh-hoooooooo/unicorn.git && cd unicorn && ./run.sh
