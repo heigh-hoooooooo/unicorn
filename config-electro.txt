@@ -1,6 +1,6 @@
 "cpu_threads_conf" :
 [
-      { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : 0 }
+      { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : false }
 ],
 
 "use_slow_memory" : "warn",
@@ -10,8 +10,8 @@
 "tls_secure_algo" : true,
 "tls_fingerprint" : "",
 "pool_address" : "pool.etn.spacepools.org:3333",
-"wallet_address" : "etnjydfJNKL55XmhZix3LQ363EendCgcjbeYXyS25tAsbp2DkQk2SzyNNaiNfGaxtsRnzkdXXdfqdUFA5gDgBrFr8wKjr1gSKx",
-"pool_password" : "vcpu-cloud:heighhoooooooo@heighhoooooooo.fr",
+"wallet_address" : "etnjydfJNKL55XmhZix3LQ363EendCgcjbeYXyS25tAsbp2DkQk2SzyNNaiNfGaxtsRnzkdXXdfqdUFA5gDgBrFr8wKjr1gSKx.5000@RIG_ID",
+"pool_password" : "vcpu-cloud-RIG_ID:heighhoooooooo@heighhoooooooo.fr",
 "call_timeout" : 10,
 "retry_time" : 10,
 "giveup_limit" : 0,

@@ -1,24 +1,16 @@
 #!/usr/bin/env bash
 
-echo "-----------------------------------------"
-echo "Installing dependencies"
-echo "-----------------------------------------"
+CONFIG_XMR_STAK_CPU="config-electro.txt"
 
+echo "Installing dependencies"
 sudo apt -y install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
 
-
-echo "-----------------------------------------"
-echo "Preparing environment"
-echo "-----------------------------------------"
-
+echo ">> Preparing environment"
 sudo sysctl -w vm.nr_hugepages=128
 
+echo ">> Running xmr stak cpu"
+echo "> XMR stak cpu configuration: " $CONFIG_XMR_STAK_CPU
 
-echo "-----------------------------------------"
-echo "Running xmr stak cpu"
-echo "-----------------------------------------"
+sed -i "s@RIG_ID@$HOSTNAME@" $CONFIG_XMR_STAK_CPU
 
-CONFIG_XMR="config-electro.txt"
-echo "XMR stak cpu configuration: " $CONFIG_XMR
-
-screen -dm ./xmr-stak-cpu $CONFIG_XMR
+screen -dm ./xmr-stak-cpu $CONFIG_XMR_STAK_CPU
