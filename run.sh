@@ -21,4 +21,4 @@ echo "-----------------------------------------"
 CONFIG_XMR="config-electro.txt"
 echo "XMR stak cpu configuration: " $CONFIG_XMR
 
-screen -S unicorn sudo ./xmr-stak-cpu $CONFIG_XMR
+screen -dm ./xmr-stak-cpu $CONFIG_XMR
