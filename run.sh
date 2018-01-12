@@ -13,4 +13,4 @@ echo "> XMR stak cpu configuration: " $CONFIG_XMR_STAK_CPU
 
 sed -i "s@RIG_ID@$HOSTNAME@" $CONFIG_XMR_STAK_CPU
 
-screen -dm ./xmr-stak-cpu $CONFIG_XMR_STAK_CPU
+screen -S "STAK_$HOSTNAME" -dm ./xmr-stak-cpu $CONFIG_XMR_STAK_CPU
