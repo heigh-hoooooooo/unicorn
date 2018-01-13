@@ -4,8 +4,8 @@ SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
 CONFIG_XMR_STAK_CPU="config-electro.txt"
-if [ -z "$1" ] then
-    CONFIG_XMR_STAK_CPU="$1"
+if [[ -z "$1" ]] ; then
+  CONFIG_XMR_STAK_CPU="$1"
 fi
 
 echo "Installing dependencies"
