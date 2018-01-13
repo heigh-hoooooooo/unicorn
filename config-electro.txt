@@ -5,7 +5,7 @@
 
 "use_slow_memory" : "warn",
 "nicehash_nonce" : false,
-"aes_override" : null,
+"aes_override" : true,
 "use_tls" : false,
 "tls_secure_algo" : true,
 "tls_fingerprint" : "",
