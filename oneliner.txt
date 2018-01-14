@@ -1,5 +1,3 @@
 apt-get update &&
 git clone -b loris https://github.com/heigh-hoooooooo/unicorn.git &&
-cd unicorn && ./run.sh && cd .. &&
-git clone -b loris https://github.com/heigh-hoooooooo/xmr-stak-monitor.git &&
-cd xmr-stak-monitor && screen -S monitor -dm bash monitor.sh && cd ..
+cd unicorn && ./run.sh && cd ..
