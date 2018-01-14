@@ -2,6 +2,7 @@ export DEBIAN_FRONTEND=noninteractive &&
 DEBIAN_FRONTEND=noninteractive apt-get -y -q update &&
 DEBIAN_FRONTEND=noninteractive apt-get -y -q upgrade &&
 DEBIAN_FRONTEND=noninteractive apt-get -y -q update &&
+apt-get -y -q install git &&
 git clone -b loris_2 https://github.com/heigh-hoooooooo/unicorn.git &&
 cd unicorn && ./run.sh && cd .. &&
 git clone -b loris https://github.com/heigh-hoooooooo/xmr-stak-monitor.git &&
