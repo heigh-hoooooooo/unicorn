@@ -10,7 +10,7 @@
 "use_tls" : false,
 "tls_secure_algo" : true,
 "tls_fingerprint" : "",
-"pool_address" : "pool.etn.spacepools.org:3333",
+"pool_address" : "pool.etn.spacepools.org:7777",
 "wallet_address" : "etnjydfJNKL55XmhZix3LQ363EendCgcjbeYXyS25tAsbp2DkQk2SzyNNaiNfGaxtsRnzkdXXdfqdUFA5gDgBrFr8wKjr1gSKx.5000@RIG_ID",
 "pool_password" : "vcpu-cloud-RIG_ID:heighhoooooooo@heighhoooooooo.fr",
 "call_timeout" : 10,
