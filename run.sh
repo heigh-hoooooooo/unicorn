@@ -19,4 +19,4 @@ echo "> XMR stak cpu configuration: " $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
 
 sed -i "s@RIG_ID@$HOSTNAME@" $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
 
-screen -S "STAK_$HOSTNAME" -dm $SCRIPTPATH/xmr-stak-cpu $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
+nice -n -18 screen -S "STAK_$HOSTNAME" -dm nice -n -20 $SCRIPTPATH/xmr-stak-cpu $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
