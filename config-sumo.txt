@@ -1,0 +1,23 @@
+"cpu_threads_conf" :
+[
+      { "low_power_mode" : true, "no_prefetch" : true, "affine_to_cpu" : false }
+],
+
+"use_slow_memory" : "warn",
+"nicehash_nonce" : false,
+"aes_override" : true,
+"use_tls" : false,
+"tls_secure_algo" : true,
+"tls_fingerprint" : "",
+"pool_address" : "pool.sumokoin.hashvault.pro:80",
+"wallet_address" : "Sumoo4CE1iLj3MMTNFADCsPf3LYqgRH58NrCaXi1bch9b33Ap15Cx8E31pmuizHAvpdE1YPH3DuQHK9hMaxALGgAPCNA23CWXgA",
+"pool_password" : "RIG_ID:loris.friedel@gmail.com",
+"call_timeout" : 10,
+"retry_time" : 10,
+"giveup_limit" : 0,
+"verbose_level" : 4,
+"h_print_time" : 60,
+"daemon_mode" : false,
+"output_file" : "",
+"httpd_port" : 8080,
+"prefer_ipv4" : true,
