@@ -22,7 +22,7 @@ echo ">> Running xmr stak cpu"
 nice -n -19 screen -S "STAK_$HOSTNAME" -dm $SCRIPTPATH/xmr-stak-cpu $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
 
 STAKCPU_PROCESS=$(pgrep -o -x xmr-stak-cpu)
-cpulimit -l 100 $STAKCPU_PROCESS
+cpulimit -l 90 $STAKCPU_PROCESS
 renice -n -20 $STAKCPU_PROCESS
 
 sleep 2
