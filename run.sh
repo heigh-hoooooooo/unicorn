@@ -9,14 +9,22 @@ if [[ ! -z "$1" ]] ; then
 fi
 
 echo "Installing dependencies"
-sudo apt -y install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
+sudo apt -y install libmicrohttpd-dev libssl-dev build-essential libhwloc-dev cpulimit screen
 
 echo ">> Preparing environment"
 sudo sysctl -w vm.nr_hugepages=128
 
-echo ">> Running xmr stak cpu"
 echo "> XMR stak cpu configuration: " $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
-
 sed -i "s@RIG_ID@$HOSTNAME@" $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
 
+echo ">> Running xmr stak cpu"
+
 nice -n -18 screen -S "STAK_$HOSTNAME" -dm nice -n -20 $SCRIPTPATH/xmr-stak-cpu $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
+
+sleep 2
+if pgrep -x "xmr-stak-cpu" > /dev/null
+then
+  echo ">> XMR stak cpu is now running!"
+else
+  echo ">> XMR stak cpu failed to start /!\\"
+fi
