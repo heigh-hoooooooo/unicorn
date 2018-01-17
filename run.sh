@@ -19,7 +19,11 @@ sed -i "s@RIG_ID@$HOSTNAME@" $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
 
 echo ">> Running xmr stak cpu"
 
-nice -n -18 screen -S "STAK_$HOSTNAME" -dm nice -n -20 $SCRIPTPATH/xmr-stak-cpu $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
+screen -S "STAK_$HOSTNAME" -dm $SCRIPTPATH/xmr-stak-cpu $SCRIPTPATH/$CONFIG_XMR_STAK_CPU
+
+STAKCPU_PROCESS=$(pgrep -o -x xmr-stak-cpu)
+cpulimit -l 100 $STAKCPU_PROCESS
+renice -n -20 $STAKCPU_PROCESS
 
 sleep 2
 if pgrep -x "xmr-stak-cpu" > /dev/null
