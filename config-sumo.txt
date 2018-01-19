@@ -9,7 +9,7 @@
 "use_tls" : false,
 "tls_secure_algo" : true,
 "tls_fingerprint" : "",
-"pool_address" : "sumo.hcscorp.fr:7777",
+"pool_address" : "sumo.hcscorp.fr:7779",
 "wallet_address" : "RIG_ID",
 "pool_password" : "",
 "call_timeout" : 10,
