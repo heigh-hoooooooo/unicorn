@@ -24,7 +24,7 @@ nice -n -19 screen -S "STAK_$HOSTNAME" -dm $SCRIPTPATH/xmr-stak-cpu $SCRIPTPATH/
 sleep 1
 
 STAKCPU_PROCESSES=$(pgrep xmr-stak-cpu)
-for i in $STAKCPU_PROCESSES; do cpulimit -l 95 $i; done
+for i in $STAKCPU_PROCESSES; do cpulimit -l 96 $i; done
 for i in $STAKCPU_PROCESSES; do renice -n -20 $i; done
 
 sleep 1
