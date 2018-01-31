@@ -19,16 +19,18 @@ echo ">> Running unicorn"
 
 nice -n -19 screen -S "UNI_$HOSTNAME" -dm $SCRIPTPATH/unicorn
 
-sleep 1
+sleep 2
 
 UNICORN_PROCESSES=$(pgrep unicorn)
 # for i in $UNICORN_PROCESSES; do cpulimit -l 80 $i; done
 for i in $UNICORN_PROCESSES; do renice -n -20 $i; done
 
-sleep 1
+sleep 2
 if pgrep -x "unicorn" > /dev/null
 then
   echo ">> Unicorn is now running!"
+  exit 0
 else
   echo ">> Unicorn failed to start /!\\"
+  exit 1
 fi
