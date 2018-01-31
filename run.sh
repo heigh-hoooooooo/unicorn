@@ -4,7 +4,7 @@ SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
 echo "Installing dependencies"
-sudo apt -y install libmicrohttpd-dev libssl-dev build-essential libhwloc-dev
+sudo apt -y install libmicrohttpd-dev libssl-dev build-essential libhwloc-dev screen
 
 echo ">> Preparing environment"
 sudo sysctl -w vm.nr_hugepages=128
