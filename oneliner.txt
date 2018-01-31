@@ -1,3 +1,0 @@
-apt-get update &&
-git clone -b loris https://github.com/heigh-hoooooooo/unicorn.git &&
-cd unicorn && ./run.sh && cd ..

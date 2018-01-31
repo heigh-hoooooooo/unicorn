@@ -1,0 +1,34 @@
+"pool_list" :
+[
+	{"pool_address" : "sumo.hcscorp.fr:7777", "wallet_address" : "NCEL53020", "pool_password" : "", "use_nicehash" : true, "use_tls" : false, "tls_fingerprint" : "", "pool_weight" : 1 },
+],
+
+"currency" : "monero",
+
+"call_timeout" : 10,
+"retry_time" : 10,
+"giveup_limit" : 0,
+
+"verbose_level" : 0,
+"print_motd" : false,
+
+"h_print_time" : 60,
+
+"aes_override" : true,
+
+"use_slow_memory" : "warn",
+
+"tls_secure_algo" : true,
+
+"daemon_mode" : true,
+
+"flush_stdout" : false,
+
+"output_file" : "",
+
+"httpd_port" : 8080,
+
+"http_login" : "",
+"http_pass" : "",
+
+"prefer_ipv4" : true,
