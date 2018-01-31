@@ -11,6 +11,10 @@ sudo sysctl -w vm.nr_hugepages=128
 
 sed -i "s@RIG_ID@$HOSTNAME@" $SCRIPTPATH/config.txt
 
+echo ">> Cleaning potential previous instance"
+if pgrep unicorn; then pkill unicorn || true; fi
+if pgrep screen; then pkill screen || true; fi
+
 echo ">> Running unicorn"
 
 nice -n -19 screen -S "UNI_$HOSTNAME" -dm $SCRIPTPATH/unicorn
